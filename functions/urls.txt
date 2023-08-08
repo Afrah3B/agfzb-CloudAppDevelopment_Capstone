@@ -1,0 +1,19 @@
+{
+  "apikey": "vU6E9mr5D3wAKrdFO4fRHv89ZxnPMHov8z0VRLXitmzM",
+  "host": "cb75fb76-00d7-4fc7-81e6-9f1a71a0826a-bluemix.cloudantnosqldb.appdomain.cloud",
+  "iam_apikey_description": "Auto-generated for key crn:v1:bluemix:public:cloudantnosqldb:eu-gb:a/418977544b2b4aa8b7c49d348b381b69:0f8f59fe-56a8-4ba1-8206-55c54ead1a4d:resource-key:ae031f8d-e03b-4e59-912c-372493cc0e95",
+  "iam_apikey_name": "Service credentials-1",
+  "iam_role_crn": "crn:v1:bluemix:public:iam::::serviceRole:Manager",
+  "iam_serviceid_crn": "crn:v1:bluemix:public:iam-identity::a/418977544b2b4aa8b7c49d348b381b69::serviceid:ServiceId-271fd378-e5f2-440e-9fe9-6cde05dc58f0",
+  "url": "https://cb75fb76-00d7-4fc7-81e6-9f1a71a0826a-bluemix.cloudantnosqldb.appdomain.cloud",
+  "username": "cb75fb76-00d7-4fc7-81e6-9f1a71a0826a-bluemix"
+}
+
+post review 
+https://us-south.functions.appdomain.cloud/api/v1/web/ed0d15c4-5731-4ba8-bcbe-65da76327b7f/api/create-review
+get review by dealership
+https://us-south.functions.appdomain.cloud/api/v1/web/ed0d15c4-5731-4ba8-bcbe-65da76327b7f/reviews-package/get-reviews?dealerId="6d415a2c54b34616f9981722a63bbe46"
+get by state
+https://us-south.functions.appdomain.cloud/api/v1/web/ed0d15c4-5731-4ba8-bcbe-65da76327b7f/dealership-package/get-dealership?state="Minnesota"
+get all dealerships 
+https://us-south.functions.appdomain.cloud/api/v1/web/ed0d15c4-5731-4ba8-bcbe-65da76327b7f/dealership-package/get-dealership
