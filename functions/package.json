@@ -9,7 +9,8 @@
   "author": "",
   "license": "MIT",
   "dependencies": {
-    "@cloudant/cloudant": "^4.5.1"
+    "@cloudant/cloudant": "^4.5.1",
+    "express": "^4.18.2"
   },
   "description": ""
 }

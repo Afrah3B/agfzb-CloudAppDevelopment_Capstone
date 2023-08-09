@@ -3,15 +3,14 @@ from django.http import HttpResponseRedirect, HttpResponse
 from django.contrib.auth.models import User
 from django.shortcuts import get_object_or_404, render, redirect
 # from .models import related models
-from .models import CarMake, CarModel
 # from .restapis import related methods
-from .restapis import get_dealers_from_cf, get_dealer_reviews_from_cf, post_request
 from django.contrib.auth import login, logout, authenticate
 from django.contrib import messages
 from datetime import datetime
 import logging
 import json
-
+from .models import CarMake, CarModel
+from .restapis import get_dealers_from_cf, get_dealer_reviews_from_cf, post_request
 # Get an instance of a logger
 logger = logging.getLogger(__name__)
 
@@ -19,6 +18,7 @@ logger = logging.getLogger(__name__)
 # Create your views here.
 
 
+# Create an `about` view to render a static about page
 # Create an `about` view to render a static about page
 def about(request):
     context = {}
@@ -71,8 +71,7 @@ def registration_request(request):
         except:
             logger.error("New user")
         if not user_exist:
-            user = User.objects.create_user(username=username, first_name=first_name, last_name=last_name,
-                                            password=password)
+            user = User.objects.create_user(username=username, first_name=first_name, last_name=last_name, password=password)
             login(request, user)
             return redirect("djangoapp:index")
         else:
@@ -83,7 +82,7 @@ def registration_request(request):
 def get_dealerships(request):
     context = {}
     if request.method == "GET":
-        url = ""
+        url = "https://us-south.functions.appdomain.cloud/api/v1/web/89ac15c6-b8ef-4388-ac74-b45e93d9c23a/dealership/dealership"
         # Get dealers from the URL
         dealerships = get_dealers_from_cf(url)
         context = {}
@@ -95,7 +94,7 @@ def get_dealerships(request):
 def get_dealer_details(request, dealer_id):
     context = {}
     if request.method == "GET":
-        url = ""
+        url = "https://us-south.functions.appdomain.cloud/api/v1/web/89ac15c6-b8ef-4388-ac74-b45e93d9c23a/dealership/dealership"
         # Get dealers from the URL
         reviews = get_dealer_reviews_from_cf(url, dealer_id = dealer_id)
         # Append to context
@@ -115,7 +114,7 @@ def add_review(request, dealer_id):
         return render(request, 'djangoapp/add_review.html', context)
     elif request.method == "POST":
         if user.is_authenticated:
-            url = ''
+            url = 'https://us-south.functions.appdomain.cloud/api/v1/web/89ac15c6-b8ef-4388-ac74-b45e93d9c23a/dealership/dealership'
             review = {}
             review['name'] = user.first_name + ' ' + user.last_name
             review['dealership'] = dealer_id
@@ -135,4 +134,4 @@ def add_review(request, dealer_id):
             print (result)
             context["dealer_id"] = dealer_id
             return redirect("/djangoapp/dealer/" + str(dealer_id), context)
-            
+

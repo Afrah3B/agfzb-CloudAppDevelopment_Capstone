@@ -19,3 +19,5 @@ get by state
 https://us-south.functions.appdomain.cloud/api/v1/web/89ac15c6-b8ef-4388-ac74-b45e93d9c23a/dealership-package/get-dealership?state="Minnesota"
 get all dealerships 
 https://us-south.functions.appdomain.cloud/api/v1/web/89ac15c6-b8ef-4388-ac74-b45e93d9c23a/dealership-package/get-dealership
+
+https://us-south.functions.appdomain.cloud/api/v1/web/89ac15c6-b8ef-4388-ac74-b45e93d9c23a/dealership/dealership
