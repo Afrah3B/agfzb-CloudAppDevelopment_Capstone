@@ -6,7 +6,7 @@
   "iam_role_crn": "crn:v1:bluemix:public:iam::::serviceRole:Manager",
   "iam_serviceid_crn": "crn:v1:bluemix:public:iam-identity::a/418977544b2b4aa8b7c49d348b381b69::serviceid:ServiceId-f3e5135c-4de2-4b2c-bf10-770c75f64a55",
   "url": "
-  https://4599ccaf-0bdf-4ff3-b934-583631a0bdb0-bluemix.cloudantnosqldb.appdomain.cloud
+https://4599ccaf-0bdf-4ff3-b934-583631a0bdb0-bluemix.cloudantnosqldb.appdomain.cloud
   "username": "4599ccaf-0bdf-4ff3-b934-583631a0bdb0-bluemix"
 }
 

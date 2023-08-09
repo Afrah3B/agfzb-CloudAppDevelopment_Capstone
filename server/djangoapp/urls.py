@@ -11,7 +11,7 @@ urlpatterns = [
     path(route='', view=views.get_dealerships, name='index'),
 
     # path for about view
-     path(route='about/', view=views.about, name='about'),
+    path(route='about/', view=views.about, name='about'),
 
     # path for contact us view
     path(route='contact/', view=views.contact, name='contact'),
