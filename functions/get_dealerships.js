@@ -13,13 +13,13 @@ const { IamAuthenticator } = require("ibm-cloud-sdk-core");
 async function main(params) {
   console.log("params", params);
   const authenticator = new IamAuthenticator({
-    apikey: "vU6E9mr5D3wAKrdFO4fRHv89ZxnPMHov8z0VRLXitmzM",
+    apikey: "5DPKvie8R4beZ5FIx9tkyOtnTIOrlSkEFFg7OVYyr1gz",
   });
   const cloudant = CloudantV1.newInstance({
     authenticator: authenticator,
   });
   cloudant.setServiceUrl(
-    "https://cb75fb76-00d7-4fc7-81e6-9f1a71a0826a-bluemix.cloudantnosqldb.appdomain.cloud"
+    "https://4599ccaf-0bdf-4ff3-b934-583631a0bdb0-bluemix.cloudantnosqldb.appdomain.cloud"
   );
   if (params.__ow_method == "get") {
     if (params.state) {
